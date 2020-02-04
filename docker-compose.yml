@@ -10,7 +10,7 @@ services:
     web-app:
         image: shridh0r/frappe:ubuntu-zero_v12
         ports:
-            - "8005:8000"
+            - "8000:8000"
         restart: unless-stopped
         volumes:
           - ./sites/common_site_config.json:/home/frappe/frappe-bench/sites/common_site_config.json
