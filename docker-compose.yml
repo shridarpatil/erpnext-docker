@@ -1,14 +1,8 @@
 version: '3'
 
 services:
-    buid-app:
-      image: shridh0r/frappe:ubuntu-zero_v12
-      build:
-        context: .
-        dockerfile: ./Dockerfile
-
     web-app:
-        image: shridh0r/frappe:ubuntu-zero_v12
+        image: shridh0r/erpnext:v12
         ports:
             - "8000:8000"
         restart: unless-stopped
@@ -21,13 +15,10 @@ services:
           - redis
           - postgres
             # command: /home/frappe/frappe-bench/env/bin/gunicorn -b 0.0.0.0:8000 --workers 4 --threads 4 -t 120 frappe.app:application --preload
-        # command: sh -c "cd /home/frappe/frappe-bench && ./env/bin/pip install -e apps/sirius && /home/frappe/.local/bin/bench start"
         command: sh -c "cd /home/frappe/frappe-bench && bench use site1.local && /home/frappe/.local/bin/bench start"
-        # command: sh -c "cd /home/frappe/frappe-bench/sites && /home/frappe/frappe-bench/env/bin/gunicorn -b 0.0.0.0:8000 --workers 8 --threads 4 -t 120 frappe.app:application --preload"
-        # command: "/bin/bash"
 
     default-worker:
-        image: shridh0r/frappe:ubuntu-zero_v12
+        image: shridh0r/erpnext:v12
         restart: unless-stopped
         volumes:
           - ./sites/common_site_config.json:/home/frappe/frappe-bench/sites/common_site_config.json
@@ -36,7 +27,7 @@ services:
           - web-app
 
     long-worker:
-        image: shridh0r/frappe:ubuntu-zero_v12
+        image: shridh0r/erpnext:v12
         restart: unless-stopped
         volumes:
           - ./sites/common_site_config.json:/home/frappe/frappe-bench/sites/common_site_config.json
@@ -45,7 +36,7 @@ services:
           - web-app
 
     short-worker:
-        image: shridh0r/frappe:ubuntu-zero_v12
+        image: shridh0r/erpnext:v12
         restart: unless-stopped
         volumes:
           - ./sites/common_site_config.json:/home/frappe/frappe-bench/sites/common_site_config.json
@@ -54,7 +45,7 @@ services:
           - web-app
 
     scheduler:
-        image: shridh0r/frappe:ubuntu-zero_v12
+        image: shridh0r/erpnext:v12
         restart: unless-stopped
         volumes:
           - ./sites/common_site_config.json:/home/frappe/frappe-bench/sites/common_site_config.json
@@ -63,7 +54,7 @@ services:
           - web-app
 
     socketio:
-        image: shridh0r/frappe:ubuntu-zero_v12
+        image: shridh0r/erpnext:v12
         restart: unless-stopped
         ports:
             - "9000:9000"
