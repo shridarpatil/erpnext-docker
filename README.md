@@ -17,6 +17,7 @@ Exec into docker container and create new site
 
 - ```bench install-app erpnext```
 
+- Visit `http://localhost:8000`.
 
 ## Custom Build
 Docker build by default pull's erpnext master branch </br>
