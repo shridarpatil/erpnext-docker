@@ -14,7 +14,7 @@ Docker compose buld by default pull erpnext master branch </br>
 
 Set frappe-path/branch dynamically by passing build-arg
 ```
-docker-compose build --build-arg FRAPPE_PATH=https://github.com/erpnext/erpnext.git --build-arg IMAGE_VERSION=v12
+docker-compose build --build-arg APP_PATH=https://github.com/erpnext/erpnext.git --build-arg IMAGE_VERSION=v12
 ```
 
 ## Run
