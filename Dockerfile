@@ -11,4 +11,4 @@ ARG BRANCH=master
 USER frappe
 WORKDIR /home/frappe/frappe-bench
 RUN ../start_up.sh build
-# CMD ["/home/frappe/frappe-bench/env/bin/gunicorn", "-b", "127.0.0.1:8000", "--workers", "28", "--threads", "4", "-t", "120", "frappe.app:application", "--preload"]
+# CMD ["/home/frappe/frappe-bench/env/bin/gunicorn", "-b", "0.0.0.0:8000", "--workers", "28", "--threads", "4", "-t", "120", "frappe.app:application", "--preload"]
