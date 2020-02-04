@@ -13,15 +13,16 @@ Docker compose buld by default pull erpnext master branch </br>
 
 
 ## Run
+Docker compose up by default runs bench start you can change it run using gunicorn by replacing the command under service web-app in docker-compose.yml with the following command
+
+```/home/frappe/frappe-bench/env/bin/gunicorn -b 0.0.0.0:8000 --workers 4 --threads 4 -t 120 frappe.app:application --preload```.
+
 ```docker-compose up```
+
 
 ## Create site
 Exec into docker container and create new site
 
-Create new-site
-```
-bench new-site site1.local --force --db-type postgres
-```
-```
-bench install-app erpnext
-```
+- ```bench new-site site1.local --force --db-type postgres```
+
+- ```bench install-app erpnext```
