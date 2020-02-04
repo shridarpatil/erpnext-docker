@@ -3,7 +3,7 @@ Dockerizing erpnext for production
 
 
 ## Run
-Docker compose up by default runs bench start you can change it run using gunicorn by replacing the command under service web-app in docker-compose.yml with the following command
+Docker compose up by default runs bench start you can change it to run using gunicorn by replacing the command under service web-app in docker-compose.yml file with the following command
 
 ```/home/frappe/frappe-bench/env/bin/gunicorn -b 0.0.0.0:8000 --workers 4 --threads 4 -t 120 frappe.app:application --preload```.
 
