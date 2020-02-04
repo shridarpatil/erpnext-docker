@@ -3,7 +3,7 @@ Dockerizing erpnext for production
 
 
 ## Build
-Docker compose buld by default pull frappe master branch </br>
+Docker compose buld by default pull erpnext master branch </br>
 ``` docker build . -t shridh0r/erpnext:v12 --build-arg BRANCH=version-12 --build-arg IMAGE_VERSION=v12 ```
 
 #### Build args
