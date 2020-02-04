@@ -23,6 +23,6 @@ Docker build by default pull's erpnext master branch </br>
 ``` docker build . -t shridh0r/erpnext:v12 --build-arg BRANCH=version-12 --build-arg IMAGE_VERSION=v12 ```
 
 #### Build args
-- [x] IMAGE_VERSION - Frappe image tagname. Check tags -> (https://hub.docker.com/r/shridh0r/frappe/tags)
+- [x] IMAGE_VERSION - Frappe image tagname. Check tags -> (https://hub.docker.com/r/shridh0r/erpnext/tags)
 - [x] BRANCH - Branch name
 - [x] APP_PATH - Erpnext app path
