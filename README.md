@@ -1,22 +1,20 @@
-# frappe-docker
-Dockerizing frappe for production
+# Erpnext-docker
+Dockerizing erpnext for production
 
 
 ## Build
 Docker compose buld by default pull frappe master branch </br>
-``` docker-compose build ```
+``` docker build . -t shridh0r/erpnext:v12 --build-arg BRANCH=version-12 --build-arg IMAGE_VERSION=v12 ```
 
 #### Build args
-- [x] FRAPPE_PATH - Frappe repo path  
-- [x] FRAPPE_BRANCH - Branch name
-- [x] FRAPPE_PYTHON - Python version
-- [x] FRAPPE - Folde name
-- [x] BENCH_BRANCH - Bench repo path
-- [x] BENCH_PATH - Branch name
+- [x] IMAGE_VERSION - Frappe image tagname. Check tags -> (https://hub.docker.com/r/shridh0r/frappe/tags)
+- [x] BRANCH - Branch name
+- [x] APP_PATH - Erpnext app path
+
 
 Set frappe-path/branch dynamically by passing build-arg
 ```
-docker-compose build --build-arg FRAPPE_PATH=https://github.com/zerodhatech/frappe.git --build-arg FRAPPE_BRANCH=zero_v12
+docker-compose build --build-arg FRAPPE_PATH=https://github.com/erpnext/erpnext.git --build-arg IMAGE_VERSION=v12
 ```
 
 ## Run
