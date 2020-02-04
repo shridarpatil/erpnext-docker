@@ -21,6 +21,8 @@ docker-compose build --build-arg FRAPPE_PATH=https://github.com/erpnext/erpnext.
 ```docker-compose up```
 
 ## Create site
+Exec into docker container and create new site
+
 Create new-site
 ```
 bench new-site site1.local --force --db-type postgres --db-root-username postgres --db-root-password root
