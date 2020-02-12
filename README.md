@@ -1,6 +1,8 @@
 # Erpnext-docker
 Dockerizing erpnext for production
 
+## Pull docker image
+```docker pull shridh0r/erpnext:tagname```
 
 ## Run
 Docker compose up by default runs bench start you can change it to run using gunicorn by replacing the command under service web-app in docker-compose.yml file with the following command
