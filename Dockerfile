@@ -7,7 +7,7 @@ USER root
 RUN chmod 777 /home/frappe/start_up.sh
 ARG APP_PATH=https://github.com/frappe/erpnext.git
 ARG BRANCH=master
-# RUN chmod +rwx start_up.sh
+
 USER frappe
 WORKDIR /home/frappe/frappe-bench
 RUN ../start_up.sh build
