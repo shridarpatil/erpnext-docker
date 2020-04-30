@@ -4,3 +4,5 @@
 [._]s[a-v][a-z]
 [._]sw[a-p]
 data
+./sites/assets
+sites/.build
