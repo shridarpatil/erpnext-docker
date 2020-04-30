@@ -1,5 +1,17 @@
 # Erpnext-docker
 Dockerizing erpnext for production
+```
+git clone https://github.com/shridarpatil/erpnext-docker.git
+
+cd  erpnext-docker
+docker-compose up
+
+docker exec -it erpnext-docker_web-app_1 /bin/sh
+
+bench reinstall --admin-password r00t --mariadb-root-username root --mariadb-root-password root
+```
+
+# Customizing docker
 
 ## Pull docker image
 ```docker pull shridh0r/erpnext:tagname```
