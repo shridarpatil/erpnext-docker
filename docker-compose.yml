@@ -7,10 +7,8 @@ services:
             - "8005:8000"
         restart: unless-stopped
         volumes:
-          - ./sites/common_site_config.json:/home/frappe/frappe-bench/sites/common_site_config.json
-          - ./sites/site1.local:/home/frappe/frappe-bench/sites/site1.local
-          - ./sites/apps.txt:/home/frappe/frappe-bench/sites/apps.txt
-          - ./sites/Procfile:/home/frappe/frappe-bench/Procfile
+          - ./sites/:/home/frappe/frappe-bench/sites/
+          - ./Procfile:/home/frappe/frappe-bench/Procfile
         depends_on:
           - redis
           - mysql
