@@ -10,7 +10,7 @@ update same tagname in docker-compose.yml file
 docker-compose up
 docker exec -it erpnext-docker_web-app_1 /bin/sh
 
-bench reinstall --admin-password r00t --mariadb-root-username root --mariadb-root-password root
+bench reinstall
 bench build
 ```
 open http://localhost:8005
