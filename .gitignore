@@ -3,6 +3,12 @@
 [._]*.sw[a-p]
 [._]s[a-v][a-z]
 [._]sw[a-p]
-data
-./sites/assets
 sites/.build
+data/*
+apps/*
+!apps/README.md
+*.build
+*/assets/*
+*/private/*
+*/public/*
+*logs/*

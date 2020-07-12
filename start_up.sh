@@ -9,7 +9,7 @@ build(){
     echo "[i] App branch: $BRANCH"
 
     # Python Version
-    bench get-app --branch $BRANCH erpnext $APP_PATH
+    bench get-app --branch $BRANCH erpnext $APP_PATH --skip-assets
 #    bench install-app erpnext
 }
 

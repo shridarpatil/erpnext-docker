@@ -1,0 +1,6 @@
+2020-07-12 12:04:40,399 ERROR frappe New Exception collected with id: 2020-07-12 12:04:39.981687-127.0.0.1-c9a
+Site: site1.local
+Form Dict: {'cmd': 'frappe.desk.page.setup_wizard.setup_wizard.setup_complete'}
+2020-07-12 12:07:43,603 ERROR frappe New Exception collected with id: 2020-07-12 12:07:43.511893-127.0.0.1-21e
+Site: site1.local
+Form Dict: {'cmd': 'erpnext.accounts.doctype.account.chart_of_accounts.chart_of_accounts.validate_bank_account'}
