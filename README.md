@@ -33,7 +33,7 @@ Docker compose up by default runs bench start you can change it to run using gun
 ## Create site
 Exec into docker container and create new site
 
-- ```bench new-site site1.local --force --db-type postgres```
+- ```bench new-site site1.local```
 
 - ```bench install-app erpnext```
 
